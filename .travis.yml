@@ -26,4 +26,5 @@ install:
   - pip3 install --upgrade pip  # all three OSes agree about 'pip3'
   - pip3 install -r requirements.txt
   - pip3 install  .
-script: python3 my_app.py || python my_app.py
+script:
+  - pytest
