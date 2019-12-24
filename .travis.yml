@@ -1,6 +1,5 @@
 language: python            # this works for Linux but is an error on macOS or Windows
 python:
-  - "3.4"
   - "3.5"
   - "3.6"      # current default Python on Travis CI
   - "3.7"
