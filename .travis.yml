@@ -26,12 +26,12 @@ before_install:
   - pip3 install --upgrade pip  # all three OSes agree about 'pip3'
   - pip3 install -r requirements.txt
   - pip3 install -U pytest
-  - pip install codecov
+  - pip install codecov pytest-cov
 
 install:
     - pip3 install  .
 script:
-  - pytest
+  - pytest --cov=./
 
 
 after_success:
