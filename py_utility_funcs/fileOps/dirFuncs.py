@@ -1,8 +1,15 @@
 import os
 
 def get_dir_size(path = '.', display = False):
-	"""Get Size of a Directory
-	
+	'''Get Size of a Directory
+
+	.. code-block:: python
+
+		import py_utility_funcs.fileOps as puf
+
+		dir_size = puf.get_dir_size(path = '.', display = False')
+		puf.get_dir_size(path = '.', display = True')
+		
 	Parameters
 	----------
 	path: str
@@ -15,7 +22,7 @@ def get_dir_size(path = '.', display = False):
 	-------
 	size: integer
 		Total Size of the directory
-	"""
+	'''
 	total_size = 0
 	for dirpath, dirnames, filenames in os.walk(path):
 		for f in filenames:
@@ -28,8 +35,14 @@ def get_dir_size(path = '.', display = False):
 	return total_size
 	
 def get_subdir_sizes(dirName = '.'):
-	"""Print/Get Sizes of each sub folders in a Directory. (No recursion)
+	'''Print/Get Sizes of each sub folders in a Directory. (No recursion)
 	Sizes are automatically displayed in KB/MB/GB/TB
+	
+	.. code-block:: python
+
+		import py_utility_funcs.fileOps as puf
+
+		subdir_sizes = puf.get_subdir_sizes(dirName = '.')
 	
 	Parameters
 	----------
@@ -41,7 +54,7 @@ def get_subdir_sizes(dirName = '.'):
 	-------
 	None
 		All the sub directory/folder sizes are displayed on terminal 
-	"""
+	'''
 	for x in  os.listdir(dirName):
 		poi = os.path.join(dirName,x)
 		if os.path.isdir(poi):
@@ -60,9 +73,15 @@ def get_subdir_sizes(dirName = '.'):
 
 import pandas as pd			  
 def get_subdir_sizes_in_dataframe(dirName = '.', display_df=True):
-	"""Print/Get Sizes of each sub folders in a Directory sorted by size in descending order. (No recursion)
+	'''Print/Get Sizes of each sub folders in a Directory sorted by size in descending order. (No recursion)
 	Sizes are automatically displayed in MB. A pandas dataframe is also returned.
-	
+
+	.. code-block:: python
+
+		import py_utility_funcs.fileOps as puf
+
+		subdir_sizes_df = puf.get_subdir_sizes_in_dataframe(dirName = '.', display_df=True)
+		
 	Parameters
 	----------
 	dirName: str
@@ -75,7 +94,7 @@ def get_subdir_sizes_in_dataframe(dirName = '.', display_df=True):
 	-------
 	None
 		All the sub directory/folder sizes are displayed on terminal 
-	"""	
+	'''
 	sDict = {}
 	for x in  os.listdir(dirName):
 		poi = os.path.join(dirName,x)

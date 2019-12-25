@@ -2,16 +2,18 @@ from os import listdir
 from os.path import isfile, join
 
 def find_file(dirPath = '.', regex='.txt'):
-	"""Find Files in a directory by applying regular expression
+	'''
+	Find Files in a directory by applying regular expression.
 
 	Usage
 	----------
-    .. code-block:: python
+	
+	.. code-block:: python
 
-        import py_utility_funcs.fileOps as puf
-		found_files = puf.find_file(regex= '.txt')
-        ...
+		import py_utility_funcs.fileOps as puf
 
+		found_files = puf.find_file(dirPath = '.', regex= '.py')
+     
 	
 	Parameters
 	----------
@@ -25,7 +27,8 @@ def find_file(dirPath = '.', regex='.txt'):
 	-------
 	matchedFiles: file list 
 		file list matching the regex search
-	"""
+		
+	'''
 	
 	allFiles = [f for f in listdir(dirPath) if isfile(join(dirPath, f)) if regex in f]#f.endswith(regex)]
 	matchedFiles=[dirPath+x for x in allFiles]
