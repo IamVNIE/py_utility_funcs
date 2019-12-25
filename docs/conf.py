@@ -44,6 +44,8 @@ release = version
 # ones.
 import sphinx_rtd_theme
 extensions = [
+	'sphinx.ext.autodoc',
+	'sphinx.ext.coverage',
 	"sphinx_rtd_theme",
 	"sphinx.ext.napoleon"
 ]

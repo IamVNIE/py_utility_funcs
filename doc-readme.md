@@ -1,0 +1,1 @@
+sphinx-apidoc -f -o docs py_utility_funcs

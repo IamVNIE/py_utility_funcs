@@ -12,6 +12,14 @@ py\_utility\_funcs.fileOps.dirFuncs module
    :undoc-members:
    :show-inheritance:
 
+py\_utility\_funcs.fileOps.fileFuncs module
+-------------------------------------------
+
+.. automodule:: py_utility_funcs.fileOps.fileFuncs
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------
