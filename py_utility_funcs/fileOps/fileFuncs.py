@@ -3,9 +3,14 @@ from os.path import isfile, join
 
 def find_file(dirPath = '.', regex='.txt'):
 	"""Find Files in a directory by applying regular expression
+
 	Usage
 	----------
+    .. code-block:: python
 
+        import py_utility_funcs.fileOps as puf
+		found_files = puf.find_file(regex= '.txt')
+        ...
 
 	
 	Parameters
