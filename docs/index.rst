@@ -1,4 +1,4 @@
-Welcome to vin's documentation!
+Welcome to Python_Utility_Functions's documentation!
 ===============================
 
 Release v\ |version|
