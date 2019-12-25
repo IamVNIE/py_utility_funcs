@@ -26,16 +26,16 @@ before_install:
   - pip3 install --upgrade pip  # all three OSes agree about 'pip3'
   - pip3 install -r requirements.txt
   - pip3 install -U pytest
-  - pip install codecov pytest-cov
+  - pip3 install coverage
+  - pip3 install codecov pytest-cov
 
 
 install:
     - pip3 install  .
 script:
-  - pytest --cov=./
+  - coverage run -m pytest tests
 
 
 after_success:
-  - codecov --file coverage/lcov.info --disable search
-
-codecov --token="a2a2692c-19a2-494c-8040-dd4582e23976"
+  #- codecov --file coverage/lcov.info --disable search
+  - bash <(curl -s https://codecov.io/bash)
