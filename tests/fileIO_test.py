@@ -26,3 +26,7 @@ def test_get_subdir_sizes_in_dataframe():
 	assert isinstance(v, pd.DataFrame) , "get_subdir_sizes_in_dataframe with Display = True FAILED to return DataFrame"
 	v = puf.get_subdir_sizes_in_dataframe(display_df=False)
 	assert isinstance(v, pd.DataFrame) , "get_subdir_sizes_in_dataframe with Display = False FAILED to return DataFrame"
+	
+def test_fileFuncs_find_file():
+	v = puf.find_file()
+	assert isinstance(v, list) , "find_file without args FAILED to return size"	
