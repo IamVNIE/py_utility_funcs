@@ -107,7 +107,8 @@ def get_subdir_sizes_in_dataframe(dirName = '.', display_df=True):
 	if display_df:
 		print(df)
 	return df
-	
+
+'''	
 if __name__ == '__main__':
 	
 	print('Function --> {} <-- Result: {} \n\n'.format(get_dir_size.__name__, get_dir_size()))
@@ -115,3 +116,4 @@ if __name__ == '__main__':
 	get_subdir_sizes()
 	print('Function --> {}'.format(get_subdir_sizes_in_dataframe.__name__, ))
 	get_subdir_sizes_in_dataframe()
+'''
